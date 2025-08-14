@@ -19,7 +19,7 @@ def main():
 
         
         # Stop after last 5 MSE Loss values are the same OR # iterations >= 100,000 
-        # Latter needed for stochiatic SGD where last 5 MSE Loss are usually never the same
+        # Latter needed for stochastic SGD where last 5 MSE Loss are usually never the same
         if streak == 5 or len(MSE_losses) >= 100000:
             break
         
@@ -31,4 +31,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
