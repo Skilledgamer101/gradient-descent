@@ -79,8 +79,8 @@ def full_batch(w, b, learning_rate):
     print(f"w = {w}, b = {b}, MSE Loss = {MSE_loss}, Iteration = {iteration}")
     return w, b, MSE_loss
 
-# Perform stochiatic gradient descent
-def stochiatic(w, b, learning_rate):
+# Perform stochastic gradient descent
+def stochastic(w, b, learning_rate):
     
     # Formulas
     # Weight derivative = 2 * ((predicted y value - actual y value) * x value)
@@ -108,7 +108,7 @@ def stochiatic(w, b, learning_rate):
     return w, b, MSE_loss
 
 
-# Perform mini batch stochiatic gradient descent
+# Perform mini batch stochastic gradient descent
 def mini_batch(w, b, learning_rate, batch_size):
     
     # Formulas (M = batch_size)
@@ -138,4 +138,5 @@ def mini_batch(w, b, learning_rate, batch_size):
     iteration += 1
 
     print(f"w = {w}, b = {b}, MSE Loss = {MSE_loss}, Iteration = {iteration}")
+
     return w, b, MSE_loss
